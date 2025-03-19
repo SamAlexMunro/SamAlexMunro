@@ -22,7 +22,7 @@ jobs:
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
-        uses: SamAlexMunro/SamAlexMunro@v4
+        uses: SamAlexMunro/SamAlexMunro
         with:
           folder: SamAlexMunro/dist/browser
           branch: prod
