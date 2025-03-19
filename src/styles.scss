@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+// .quicksand-<uniquifier> {
+//   font-family: "Quicksand", serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
+@use 'base' as *;
+
+* {
+  box-sizing: border-box;
+  // font-family: 'Quicksand', serif;
+  font-family: 'Geologica', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($tablet-breakpoint) {
+    font-size: 24px;
+  }
+}
+
+canvas {
+  background: transparent !important;
+}
+
+body,
+#canvasContainer {
+  background: none;
+}
+
+html,
+body {
+  width: 100vw;
+  // overflow-x: hidden !important;
+}
+
+body {
+  padding: map-get($spacing, 0) map-get($spacing, m);
+  position: relative;
+  // background-color: black;
+  background: url('../public/noise-light.png'), linear-gradient(to bottom, #0e100f, #0e100f);
+  color: #fffce1;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100vw;
+
+  --fy: 1; /* initial value for vertical stretch */
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

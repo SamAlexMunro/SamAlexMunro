@@ -1,0 +1,29 @@
+@use 'base' as *;
+
+.mobile {
+  position: fixed;
+  width: calc(100% - (map-get($spacing, m) * 2));
+  bottom: 0;
+  left: map-get($spacing, m);
+  padding: map-get($spacing, m);
+  background: rgba(0, 0, 0, 0.619);
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+}
+
+.hamburger {
+  position: fixed;
+  right: map-get($spacing, m);
+  top: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12px;
+  width: 30px;
+
+  span {
+    width: 36px;
+    height: 2px;
+    background-color: #f49939;
+  }
+}

@@ -1,0 +1,14 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  visibility: hidden;
+}
